@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GloboClima.Domain\GloboClima.Domain.csproj" />
+    <ProjectReference Include="..\GloboClima.Infra.CrossCutting\GloboClima.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\GloboClima.Infra.Data\GloboClima.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
