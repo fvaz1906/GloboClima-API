@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GloboClima.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace GloboClima.Infra.Data.Context
 {
@@ -10,6 +11,8 @@ namespace GloboClima.Infra.Data.Context
         {
             base.OnModelCreating(modelBuilder);
         }
+
+        public DbSet<User> Users { get; set; }
     }
 
 }

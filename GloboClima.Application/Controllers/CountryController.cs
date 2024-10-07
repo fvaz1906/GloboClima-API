@@ -14,6 +14,10 @@ namespace GloboClima.Application.Controllers
             _countryApiService = countryApiService;
         }
 
+        /// <summary>
+        /// Obtém o País encontrado.
+        /// </summary>
+        /// <returns>um país encontrado.</returns>
         [HttpGet("{countryName}")]
         public async Task<IActionResult> GetCountry(string countryName)
         {
@@ -21,7 +25,7 @@ namespace GloboClima.Application.Controllers
 
             if (countryData != null && countryData.Length > 0)
             {
-                return Ok(countryData[0]); // Retorna o primeiro país encontrado
+                return Ok(countryData[0]);
             }
 
             return NotFound("Informações do país não encontradas.");

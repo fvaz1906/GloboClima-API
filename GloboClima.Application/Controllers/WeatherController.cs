@@ -14,6 +14,10 @@ namespace GloboClima.Application.Controllers
             _weatherApiService = weatherApiService;
         }
 
+        /// <summary>
+        /// Obtém uma cidade.
+        /// </summary>
+        /// <returns>uma cidade encontrada.</returns>
         [HttpGet("{city}")]
         public async Task<IActionResult> GetWeather(string city)
         {

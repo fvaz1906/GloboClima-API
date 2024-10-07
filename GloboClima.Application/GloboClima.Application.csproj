@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -6,9 +6,13 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>0a0eac3e-28cc-4c05-b81a-6b507b4f52c0</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.401.8" />
+        <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.301" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.33" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.33" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.33">
@@ -23,6 +27,7 @@
         </PackageReference>
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="WebTruss.EntityFrameworkCore.DynamoDb" Version="0.1.9" />
     </ItemGroup>
 
     <ItemGroup>
