@@ -1,4 +1,4 @@
-﻿using GloboClima.Infra.Data.Api;
+﻿using GloboClima.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GloboClima.Application.Controllers
@@ -7,9 +7,9 @@ namespace GloboClima.Application.Controllers
     [Route("api/[controller]")]
     public class CountryController : ControllerBase
     {
-        private readonly CountryApiService _countryApiService;
+        private readonly ICountryApiService _countryApiService;
 
-        public CountryController(CountryApiService countryApiService)
+        public CountryController(ICountryApiService countryApiService)
         {
             _countryApiService = countryApiService;
         }

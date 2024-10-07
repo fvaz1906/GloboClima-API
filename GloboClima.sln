@@ -30,6 +30,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Tests", "05 - Tests", "{FD17B8C6-A59A-4388-A7C1-92BD84E558E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboClima.Test", "GloboClima.Test\GloboClima.Test.csproj", "{EE3FF705-D328-4771-9466-F803BF1D3F7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +60,10 @@ Global
 		{95C60156-C670-40D2-9748-98F5CF877A63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95C60156-C670-40D2-9748-98F5CF877A63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95C60156-C670-40D2-9748-98F5CF877A63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE3FF705-D328-4771-9466-F803BF1D3F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE3FF705-D328-4771-9466-F803BF1D3F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE3FF705-D328-4771-9466-F803BF1D3F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE3FF705-D328-4771-9466-F803BF1D3F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +76,7 @@ Global
 		{5A3E922C-59CB-4313-AE47-A378FEA9F3C3} = {B7AB66C9-A5AA-4C68-9C5B-933F97BB6ECF}
 		{2203E8D1-99FF-4A7A-8891-8A6417F802D2} = {E8BB13DD-4E5F-4DCD-BC27-A7EFF4074A33}
 		{95C60156-C670-40D2-9748-98F5CF877A63} = {5A3E922C-59CB-4313-AE47-A378FEA9F3C3}
+		{EE3FF705-D328-4771-9466-F803BF1D3F7A} = {FD17B8C6-A59A-4388-A7C1-92BD84E558E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6295D4AE-5D80-4B75-9039-7E2E04928FB7}

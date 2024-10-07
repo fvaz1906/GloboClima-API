@@ -1,9 +1,10 @@
 ﻿using GloboClima.Domain.Entities;
+using GloboClima.Domain.Interfaces;
 using System.Net.Http.Json;
 
 namespace GloboClima.Infra.Data.Api
 {
-    public class WeatherApiService
+    public class WeatherApiService : IWeatherApiService
     {
         private readonly HttpClient _httpClient;
         private readonly string _apiKey = "ef48e1597acb5cda0bac0153dd99d689";

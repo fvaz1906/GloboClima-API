@@ -1,4 +1,4 @@
-﻿using GloboClima.Infra.Data.Api;
+﻿using GloboClima.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GloboClima.Application.Controllers
@@ -7,9 +7,9 @@ namespace GloboClima.Application.Controllers
     [Route("api/[controller]")]
     public class WeatherController : ControllerBase
     {
-        private readonly WeatherApiService _weatherApiService;
+        private readonly IWeatherApiService _weatherApiService;
 
-        public WeatherController(WeatherApiService weatherApiService)
+        public WeatherController(IWeatherApiService weatherApiService)
         {
             _weatherApiService = weatherApiService;
         }

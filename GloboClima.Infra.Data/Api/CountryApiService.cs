@@ -1,9 +1,10 @@
 ﻿using GloboClima.Domain.Entities;
+using GloboClima.Domain.Interfaces;
 using System.Net.Http.Json;
 
 namespace GloboClima.Infra.Data.Api
 {
-    public class CountryApiService
+    public class CountryApiService : ICountryApiService
     {
         private readonly HttpClient _httpClient;
 

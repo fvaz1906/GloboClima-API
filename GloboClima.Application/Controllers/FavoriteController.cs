@@ -1,5 +1,5 @@
 ﻿using GloboClima.Domain.Entities;
-using GloboClima.Infra.Data.Repository;
+using GloboClima.Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
@@ -11,9 +11,9 @@ namespace GloboClima.Application.Controllers
     [Route("api/v1/[controller]")]
     public class FavoriteController : ControllerBase
     {
-        private readonly FavoriteRepository _favoriteRepository;
+        private readonly IFavoriteRepository _favoriteRepository;
 
-        public FavoriteController(FavoriteRepository favoriteRepository)
+        public FavoriteController(IFavoriteRepository favoriteRepository)
         {
             _favoriteRepository = favoriteRepository;
         }

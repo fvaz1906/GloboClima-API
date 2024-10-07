@@ -20,6 +20,13 @@ namespace GloboClima.Infra.CrossCutting.Security
 
         public TokenModel GenerateJwtToken(User user)
         {
+
+            if (user == null)
+            {
+                throw new ArgumentNullException(nameof(user));
+            }
+
+            var userId = user.Id.ToString();
             var tokenHandler = new JwtSecurityTokenHandler();
             var secret = _configuration["Jwt:Key"];
             var expireToken = int.Parse(_configuration["Jwt:ExpiresInMinutes"]);
@@ -29,7 +36,7 @@ namespace GloboClima.Infra.CrossCutting.Security
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.NameIdentifier, userId),
                     new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 }),
                 NotBefore = DateTime.Now,

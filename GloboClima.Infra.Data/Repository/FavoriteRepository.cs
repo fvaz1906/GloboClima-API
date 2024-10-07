@@ -6,7 +6,7 @@ using GloboClima.Domain.Interfaces;
 
 namespace GloboClima.Infra.Data.Repository
 {
-    public class FavoriteRepository
+    public class FavoriteRepository : IFavoriteRepository
     {
         private readonly IAmazonDynamoDB _dynamoDbClient;
 

@@ -59,12 +59,12 @@ namespace GloboClima.Application
             }));
 
             // HTTPClient
-            services.AddHttpClient<WeatherApiService>();
-            services.AddHttpClient<CountryApiService>();
+            services.AddHttpClient<IWeatherApiService, WeatherApiService>();
+            services.AddHttpClient<ICountryApiService, CountryApiService>();
 
             // Repositories
             services.AddScoped<IBaseRepository<User>, BaseRepository<User>>();
-            services.AddScoped<FavoriteRepository>();
+            services.AddScoped<IFavoriteRepository, FavoriteRepository>();
 
             // Services
             services.AddScoped<IBaseService<User>, BaseService<User>>();
